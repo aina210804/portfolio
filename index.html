@@ -11,6 +11,7 @@
   <meta name="author" content="Raharimalala Hanitriniaina">
   <title>Raharimalala Hanitriniaina — Développeuse Full-Stack & Designer</title>
   <link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -628,13 +629,13 @@
               </div>
               <div class="contact-card-text">
                 <h4>Localisation</h4>
-                <p>LOT VBI 054, Tanjombato Tongarivo</p>
+                <p> Tanjombato </p>
               </div>
             </div>
           </div>
         </div>
 
-        <form class="contact-form reveal reveal-delay-2" id="contactForm">
+        <form class="contact-form reveal reveal-delay-2" id="contactForm" novalidate>
           <div class="form-group">
             <label for="name">Nom complet</label>
             <input type="text" id="name" name="name" placeholder="Votre nom" required>
@@ -674,6 +675,51 @@
   </footer>
 
   <script src="script.js"></script>
+  <!-- ===== EMAILJS INTEGRATION ===== -->
+  <script>
+    (function() {
+      emailjs.init({ publicKey: "X75ZgzSgpU9OaRqvY" });
+    })();
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const btn = this.querySelector('.btn-submit');
+      const originalText = btn.textContent;
+      btn.textContent = 'Envoi en cours...';
+      btn.disabled = true;
+
+      const templateParams = {
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
+        title: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+      };
+
+      emailjs.send('service_2jreb0j', 'template_dwbsc7b', templateParams)
+        .then(function() {
+          btn.textContent = '✅ Message envoyé !';
+          btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+          document.getElementById('contactForm').reset();
+          setTimeout(function() {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            btn.style.background = '';
+          }, 4000);
+        }, function(error) {
+          btn.textContent = '❌ Erreur, réessayez';
+          btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+          btn.disabled = false;
+          setTimeout(function() {
+            btn.textContent = originalText;
+            btn.style.background = '';
+          }, 4000);
+          console.error('EmailJS error:', error);
+        });
+    });
+  </script>
 </body>
 
 </html>
+
+
