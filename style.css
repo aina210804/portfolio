@@ -1475,3 +1475,55 @@ h3 i {
   margin-right: 8px;
   color: var(--accent-primary);
 }
+
+/* Luxury styling for Quality cards */
+.quality-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius);
+  margin-bottom: 16px;
+  transition: all var(--transition-normal);
+}
+
+.quality-card:hover {
+  background: var(--bg-card-hover);
+  transform: translateX(6px);
+  border-color: rgba(255, 107, 53, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.quality-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.25);
+}
+
+.quality-icon i {
+  font-size: 1.35rem;
+  color: #ffffff !important;
+}
+
+.quality-info h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.quality-info p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin: 0;
+}
