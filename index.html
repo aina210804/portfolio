@@ -1,0 +1,665 @@
+﻿<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio de Raharimalala Hanitriniaina — Développeuse Full-Stack et Designer UI/UX. Spécialisée en React, Vue.js, Spring Boot, et design graphique.">
+  <meta name="keywords" content="développeur full-stack, portfolio, web developer, designer UI/UX, Madagascar">
+  <meta name="author" content="Raharimalala Hanitriniaina">
+  <title>Raharimalala Hanitriniaina — Développeuse Full-Stack & Designer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">Aina.dev</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">À propos</a></li>
+        <li><a href="#skills" class="nav-link">Compétences</a></li>
+        <li><a href="#projects" class="nav-link">Projets</a></li>
+        <li><a href="#education" class="nav-link">Formation</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+          🌙
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero section" id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-gradient hero-gradient-1"></div>
+    <div class="hero-gradient hero-gradient-2"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Disponible pour un stage
+        </div>
+        <h1 class="hero-name">
+          Raharimalala<br><span class="accent-text">Hanitriniaina</span>
+        </h1>
+        <div class="hero-title">
+          <span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-description">
+          Étudiante en Licence Informatique à IT University Andoharanofotsy,
+          passionnée par le développement web et le design graphique.
+          Je crée des expériences digitales complètes, du concept à la réalisation.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            ✦ Voir mes projets
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            ✉ Me contacter
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo">
+            <!-- Remplacez par votre photo : <img src="assets/photo.jpg" alt="Raharimalala Hanitriniaina"> -->
+            <img src="assets/profile.jpg" alt="Raharimalala Hanitriniaina">
+          </div>
+        </div>
+        <div class="hero-float-badge badge-1">⚡ Full-Stack Dev</div>
+        <div class="hero-float-badge badge-2">🎨 UI/UX Designer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">À propos</span>
+        <h2 class="section-title">Qui suis-je ?</h2>
+        <p class="section-subtitle">
+          Développeuse full-stack avec un œil créatif pour le design
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Je suis <strong>Raharimalala Hanitriniaina</strong>, étudiante en dernière année
+            de Licence en Informatique à <strong>IT University Andoharanofotsy</strong>,
+            spécialisée en développement web et design graphique.
+          </p>
+          <p>
+            Mon parcours m'a permis de développer une double compétence technique et créative.
+            Je maîtrise autant les frameworks modernes comme React et Spring Boot que les
+            outils de design comme Figma et Adobe XD. Cette polyvalence me permet de concevoir
+            des projets de A à Z.
+          </p>
+
+          <div class="qualities-grid">
+            <div class="quality-card">
+              <div class="quality-icon">💡</div>
+              <div class="quality-info">
+                <h4>Débrouillarde</h4>
+                <p>Résolution créative de problèmes complexes</p>
+              </div>
+            </div>
+            <div class="quality-card">
+              <div class="quality-icon">🤝</div>
+              <div class="quality-info">
+                <h4>Esprit d'équipe</h4>
+                <p>Collaboration efficace et communication fluide</p>
+              </div>
+            </div>
+            <div class="quality-card">
+              <div class="quality-icon">🔄</div>
+              <div class="quality-info">
+                <h4>Capacité d'adaptation</h4>
+                <p>Flexible et rapide à apprendre de nouvelles technologies</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-info reveal reveal-delay-2">
+          <!-- Langues -->
+          <div class="about-info-section">
+            <h3>🌍 Langues</h3>
+            <div class="language-item">
+              <div class="language-header">
+                <span class="language-name">Malagasy</span>
+                <span class="language-level">Langue maternelle</span>
+              </div>
+              <div class="language-bar">
+                <div class="language-bar-fill" data-width="100"></div>
+              </div>
+            </div>
+            <div class="language-item">
+              <div class="language-header">
+                <span class="language-name">Français</span>
+                <span class="language-level">Courant</span>
+              </div>
+              <div class="language-bar">
+                <div class="language-bar-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="language-item">
+              <div class="language-header">
+                <span class="language-name">Chinois</span>
+                <span class="language-level">5 ans d'apprentissage</span>
+              </div>
+              <div class="language-bar">
+                <div class="language-bar-fill" data-width="50"></div>
+              </div>
+            </div>
+            <div class="language-item">
+              <div class="language-header">
+                <span class="language-name">Indonésien</span>
+                <span class="language-level">Niveau A2</span>
+              </div>
+              <div class="language-bar">
+                <div class="language-bar-fill" data-width="30"></div>
+              </div>
+            </div>
+            <div class="language-item">
+              <div class="language-header">
+                <span class="language-name">Anglais</span>
+                <span class="language-level">Niveau A2</span>
+              </div>
+              <div class="language-bar">
+                <div class="language-bar-fill" data-width="30"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Centres d'intérêt -->
+          <div class="about-info-section">
+            <h3>🎯 Centres d'intérêt</h3>
+            <div class="interests-wrap">
+              <span class="interest-tag">🎵 Musique</span>
+              <span class="interest-tag">✈️ Voyage</span>
+              <span class="interest-tag">💻 Tech</span>
+              <span class="interest-tag">📷 Photo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPÉTENCES ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Compétences</span>
+        <h2 class="section-title">Mon arsenal technique</h2>
+        <p class="section-subtitle">
+          Les technologies et outils que j'utilise au quotidien
+        </p>
+      </div>
+
+      <div class="skills-categories">
+        <!-- Développement -->
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-category-icon dev">⚡</div>
+            <h3 class="skill-category-title">Développement</h3>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Langages</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">Python</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Frameworks & Backend</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">Servlet</span>
+              <span class="skill-tag">Flight PHP (MVC)</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Frontend & Web</div>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Base de données</div>
+            <div class="skill-tags">
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Oracle</span>
+              <span class="skill-tag">SQLite</span>
+            </div>
+          </div>
+
+          <div class="skill-bars" style="margin-top: 24px;">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">HTML / CSS / Bootstrap</span>
+                <span class="skill-bar-percent">90%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">React / Vue.js</span>
+                <span class="skill-bar-percent">80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">Java / Spring Boot</span>
+                <span class="skill-bar-percent">78%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="78"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">PHP / Flight MVC</span>
+                <span class="skill-bar-percent">82%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">Base de données</span>
+                <span class="skill-bar-percent">76%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="76"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design -->
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-category-header">
+            <div class="skill-category-icon design">🎨</div>
+            <h3 class="skill-category-title">Design Graphique & UI/UX</h3>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Outils</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Adobe XD</span>
+              <span class="skill-tag">Illustrator</span>
+              <span class="skill-tag">InDesign</span>
+              <span class="skill-tag">Photoshop</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Créations</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Maquette</span>
+              <span class="skill-tag">Conception graphique</span>
+              <span class="skill-tag">Prototypage d'interface</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Compétences transversales</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Gestion de projet</span>
+              <span class="skill-tag">Identité visuelle</span>
+              <span class="skill-tag">Communication visuelle</span>
+            </div>
+          </div>
+
+          <div class="skill-bars" style="margin-top: 24px;">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">Figma / Adobe XD</span>
+                <span class="skill-bar-percent">88%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill cool" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">Illustrator / InDesign</span>
+                <span class="skill-bar-percent">78%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill cool" data-width="78"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">Photoshop</span>
+                <span class="skill-bar-percent">80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill cool" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">Prototypage UI/UX</span>
+                <span class="skill-bar-percent">82%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill cool" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name">Gestion de projet</span>
+                <span class="skill-bar-percent">75%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill cool" data-width="75"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJETS ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Projets</span>
+        <h2 class="section-title">Mes réalisations</h2>
+        <p class="section-subtitle">
+          Une sélection de projets académiques qui reflètent mes compétences
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Projet StockPro (React Full Stack) -->
+        <a href="project.html?id=stockpro" class="project-card reveal" id="project-stockpro">
+          <div class="project-image">
+            <img src="assets/project-stockpro.jpg" alt="StockPro - Gestion de Stock">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-body">
+            <span class="project-role">D?veloppeuse Full-Stack</span>
+            <h3 class="project-title">StockPro ? Gestion de stock (React & Node.js)</h3>
+            <p class="project-description">
+              Application web de gestion centralis?e des stocks, achats et ventes. Architecture d?coupl?e React + API REST Node.js/Express, authentification JWT, r?les RBAC, transactions atomiques et tableau de bord financier.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">JWT / RBAC</span>
+              <span class="project-tag">SQLite</span>
+            </div>
+            <div style="margin-top: 12px;">
+              <span class="project-tag" style="background: rgba(255, 107, 53, 0.15); color: #FF6B35; border-color: rgba(255, 107, 53, 0.3);">
+                ?? Voir sur GitHub
+              </span>
+            </div>
+          </div>
+        </a>
+        <!-- Projet 0 — Gestion de Stock (NOUVEAU) -->
+        <a href="project.html?id=gestion-stock" class="project-card reveal" id="project-gestion-stock">
+          <div class="project-image">
+            <img src="assets/project-gestion-stock.jpg" alt="Gestion de Stock">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-body">
+            <span class="project-role">Développeuse Full-Stack</span>
+            <h3 class="project-title">Gestion de stock — Application web</h3>
+            <p class="project-description">
+              Application complète de gestion de stock : authentification par rôles,
+              articles, mouvements, alertes automatiques, inventaire, bons de commande,
+              prévisions et rapports. Backend Node.js + SQLite, frontend vanilla JS.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <div style="margin-top: 12px;">
+              <span class="project-tag" style="background: rgba(255, 107, 53, 0.15); color: #FF6B35; border-color: rgba(255, 107, 53, 0.3);">
+                🔗 Voir sur GitHub
+              </span>
+            </div>
+          </div>
+        </a>
+        
+
+        <!-- Projet 2 -->
+        <a href="project.html?id=flamora" class="project-card reveal reveal-delay-1">
+          <div class="project-image">
+            <img src="assets/Flamora.png" alt="Flamora">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-body">
+            <span class="project-role">Designer</span>
+            <h3 class="project-title">FLAMORA — Branding</h3>
+            <p class="project-description">
+              Création complète de l'identité visuelle pour la marque FLAMORA : logo, palette de couleurs,
+              typographie et supports de communication.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Identité visuelle</span>
+              <span class="project-tag">Logo</span>
+              <span class="project-tag">Illustrator</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Projet 3 -->
+        <a href="project.html?id=orgia" class="project-card reveal reveal-delay-2">
+          <div class="project-image">
+            <img src="assets/project-branding.jpg" alt="ORGIA Branding">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-body">
+            <span class="project-role">Designer</span>
+            <h3 class="project-title">ORGIA — Branding</h3>
+            <p class="project-description">
+              Conception de l'identité visuelle pour la marque ORGIA : création de logo, choix des couleurs,
+              typographie et déclinaisons sur différents supports.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Identité visuelle</span>
+              <span class="project-tag">Logo</span>
+              <span class="project-tag">Illustrator</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Projet 4 -->
+        <a href="project.html?id=communication" class="project-card reveal reveal-delay-3">
+          <div class="project-image">
+            <img src="assets/project-communication.jpg" alt="Supports de communication">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-body">
+            <span class="project-role">Designer graphique</span>
+            <h3 class="project-title">Supports de communication</h3>
+            <p class="project-description">
+              Création de roll-up, mockups, catalogues et autres supports de présentation
+              professionnels pour divers projets graphiques.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Print</span>
+              <span class="project-tag">InDesign</span>
+              <span class="project-tag">Photoshop</span>
+            </div>
+          </div>
+        </a>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FORMATION ===== -->
+  <section class="education section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Formation</span>
+        <h2 class="section-title">Mon parcours académique</h2>
+        <p class="section-subtitle">
+          Les étapes clés de ma formation en informatique et design
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023 — 2026</span>
+            <h3 class="timeline-title">Licence en Informatique</h3>
+            <p class="timeline-school">IT University, Andoharanofotsy</p>
+            <p class="timeline-detail">
+              Formation en développement web et design graphique.
+              Acquisition de compétences full-stack avec des projets pratiques
+              en e-commerce, branding et développement d'applications web.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023</span>
+            <h3 class="timeline-title">Baccalauréat — Série C</h3>
+            <p class="timeline-school">For Twelve School</p>
+            <p class="timeline-detail">
+              Obtention du Baccalauréat scientifique, série C (Mathématiques et
+              Sciences Physiques), fondation solide en logique et résolution de problèmes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Travaillons ensemble</h2>
+        <p class="section-subtitle">
+          Une idée, un projet ou une opportunité de stage ? N'hésitez pas à me contacter.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Restons en contact</h3>
+          <p>
+            Je suis actuellement à la recherche d'un stage de 3 mois en développement
+            web et mobile pour finaliser ma Licence en Informatique.
+            Envoyez-moi un message !
+          </p>
+
+          <div class="contact-cards">
+            <a href="mailto:raharimalalahanitriniaiana20@gmail.com" class="contact-card">
+              <div class="contact-card-icon">✉</div>
+              <div class="contact-card-text">
+                <h4>Email</h4>
+                <p>raharimalalahanitriniaiana20@gmail.com</p>
+              </div>
+            </a>
+            <a href="tel:+261340671398" class="contact-card">
+              <div class="contact-card-icon">📞</div>
+              <div class="contact-card-text">
+                <h4>Téléphone</h4>
+                <p>+261 34 06 713 98</p>
+              </div>
+            </a>
+            <div class="contact-card">
+              <div class="contact-card-icon">📍</div>
+              <div class="contact-card-text">
+                <h4>Localisation</h4>
+                <p>LOT VBI 054, Tanjombato Tongarivo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal reveal-delay-2" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="L'objet de votre message">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">
+            ✦ Envoyer le message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        © 2026 Raharimalala Hanitriniaina — Conçu avec ❤️
+      </p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="GitHub">🔗</a>
+        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+        <a href="mailto:raharimalalahanitriniaiana20@gmail.com" class="social-link" aria-label="Email">✉</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

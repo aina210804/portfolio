@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galerie de projet — Raharimalala Hanitriniaina">
+  <title>Projet — Raharimalala Hanitriniaina</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific styles for the project page */
+    .project-header {
+      padding: 120px 0 60px;
+      text-align: center;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: all var(--transition-normal);
+      margin-bottom: 30px;
+      text-decoration: none;
+    }
+    
+    .btn-back:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-primary);
+      transform: translateX(-5px);
+    }
+    
+    .project-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    
+    .project-description {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    .gallery {
+      padding: 80px 0;
+      background: var(--bg-primary);
+    }
+    
+    .gallery-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      padding: 0 24px;
+    }
+    
+    .gallery-item {
+      width: 100%;
+      border-radius: var(--border-radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      background: var(--bg-secondary);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .gallery-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Loading state */
+    .loader {
+      text-align: center;
+      padding: 50px;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">Aina.dev</a>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PROJECT HEADER ===== -->
+  <header class="project-header">
+    <div class="container">
+      <a href="index.html#projects" class="btn-back">← Retour au portfolio</a>
+      <h1 class="project-title" id="projectTitle">Chargement...</h1>
+      <p class="project-description" id="projectDescription"></p>
+    </div>
+  </header>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="gallery">
+    <div class="gallery-container" id="galleryContainer">
+      <div class="loader" id="loader">Chargement de la galerie...</div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">© 2026 Raharimalala Hanitriniaina — Conçu avec ❤️</p>
+    </div>
+  </footer>
+
+  <!-- Re-use script for theme toggle -->
+  <script src="script.js"></script>
+  <!-- specific gallery script -->
+  <script src="gallery.js"></script>
+</body>
+</html>
