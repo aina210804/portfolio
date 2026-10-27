@@ -1527,3 +1527,29 @@ h3 i {
   line-height: 1.4;
   margin: 0;
 }
+
+/* Luxury Skill Category Icons */
+.skill-category-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category-icon i {
+  font-size: 1.4rem;
+  color: #ffffff !important;
+}
+
+.skill-category-icon.dev {
+  background: linear-gradient(135deg, #FF6B35, #FF8F5E);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.35);
+}
+
+.skill-category-icon.design {
+  background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35);
+}
