@@ -276,26 +276,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =============================================
-  // Contact Form (front-end only)
+  // Contact Form (handled via EmailJS in index.html)
   // =============================================
-  const contactForm = document.getElementById('contactForm');
-
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const btn = contactForm.querySelector('.btn-submit');
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '✓ Message envoyé !';
-    btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.style.background = '';
-      btn.disabled = false;
-      contactForm.reset();
-    }, 3000);
-  });
 
   // =============================================
   // Smooth Scroll for anchor links
