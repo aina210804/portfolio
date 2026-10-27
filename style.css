@@ -1427,3 +1427,51 @@ ul {
   animation: scale-in 1s ease 0.3s forwards;
   opacity: 0;
 }
+
+/* =============================================
+   FontAwesome Luxury Icons Styling
+   ============================================= */
+.quality-icon i {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.contact-card-icon i {
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.social-link i {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.social-link:hover i {
+  color: #ffffff;
+  transform: scale(1.15);
+}
+
+.skill-category-icon i {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.hero-float-badge i {
+  margin-right: 6px;
+  color: var(--accent-primary);
+}
+
+.interest-tag i {
+  margin-right: 6px;
+  color: var(--accent-primary);
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+h3 i {
+  margin-right: 8px;
+  color: var(--accent-primary);
+}

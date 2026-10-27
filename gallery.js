@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       githubLink.target = '_blank';
       githubLink.rel = 'noopener noreferrer';
       githubLink.style.cssText = 'display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: linear-gradient(135deg, #333, #555); color: #fff; border-radius: 100px; font-size: 0.95rem; font-weight: 600; text-decoration: none; margin-top: 16px; transition: all 0.3s ease;';
-      githubLink.textContent = '🐙 Voir le code sur GitHub →';
+      githubLink.innerHTML = '<i class="fa-brands fa-github"></i> Voir le code sur GitHub <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; margin-left: 4px;"></i>';
       githubLink.onmouseover = function() { this.style.background = 'linear-gradient(135deg, #FF6B35, #e55a2b)'; this.style.transform = 'translateY(-2px)'; };
       githubLink.onmouseout = function() { this.style.background = 'linear-gradient(135deg, #333, #555)'; this.style.transform = 'translateY(0)'; };
       descEl.parentElement.appendChild(githubLink);
